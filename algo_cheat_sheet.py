@@ -134,6 +134,27 @@ def fib(n):
 
 print(fib(40))
 
+###################
+# Note 1: Classes #
+###################
+
+"""
+Instantiate a class as an object. A class
+has characteristics/properties that are
+identical to types, so classes are used
+to introduce new types into the programming
+environment. Note that in python a class is
+an object too.
+
+A data type refers to the kind of object
+instantiated from built-in types or classes
+or similarly user-defined ones. Data types
+are implemented using data structures. ADTs
+are data types that come with an interface
+or specification that tells you the things
+it can do, without any requirement of knowing
+how it is implemented.
+"""
 
 #######################################
 # Code Choice 1: String concatenation #
@@ -169,3 +190,17 @@ def get_words_from_string(line):
     line = line.translate(translation_table)
     word_list = line.split()
     return word_list
+
+#######################################
+# Code Choice 3: Reading file objects #
+#######################################
+"""
+Fastest way that avoids method calls
+"""
+for line in f:
+    print(line, end='')
+"""
+readline() vs read(). if document is huge, readline() would be useful
+in picking out the important info, but if all is needed, read() is
+more efficient if you are fine with the entire string being in one line
+"""
